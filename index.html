@@ -6,10 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes App</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
+    <div class="notepadApp">
 
+        <div class="notes">
+            <div class="informationBar">
+                <div>Name</div>
+                <div>Created</div>
+                <div>Category</div>
+                <div>Content</div>
+                <div>Dates</div>
+                <button></button>
+                <button></button>
+            </div>
+            <ul class="notesBar">
+            </ul>
+            <button class="open-button">Create Note</button>
+
+            <div class=" form-popup" id="myForm">
+                <form action="#" class="form-container">
+
+                    <label><b>Name</b></label>
+                    <input type="text" class="name" required>
+
+                    <label><b>Category</b></label>
+                    <select class="category">
+                        <option value="Task">Task</option>
+                        <option value="Idea">Idea</option>
+                        <option value="Random Thought">Random Thought</option>
+                    </select>
+
+                    <label><b>Content</b></label>
+                    <textarea class="content" cols="30" rows="10"></textarea>
+
+                    <label><b>Dates</b></label>
+                    <input type="date" class="dateFirst"><input type="date" class="dateSecond">
+
+                    <button type="submit" class="save">Save</button>
+                    <button type="button" class="cancel">Close</button>
+                </form>
+            </div>
+
+
+            <div class=" archive">
+                <div class="infoArchiveBar"></div>
+                <div class="notesArchiveBar"></div>
+            </div>
+            <script src="/js/index.js"></script>
 </body>
 
 </html>
