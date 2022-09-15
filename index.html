@@ -6,10 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes App</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+    <div class="notepadApp">
+        <div class="notes">
+            <div class="informationBar">
+                <div>Name</div>
+                <div>Created</div>
+                <div>Category</div>
+                <div>Content</div>
+                <div>Dates</div>
+                <div class="material-icons">archive</div>
+                <div class="material-icons">delete</div>
+            </div>
+            <ul class="notesBar">
+            </ul>
+            <button class="open-button">Create Note</button>
 
+            <div class=" form-popup" id="myForm">
+                <form action="#" class="form-container">
+
+                    <label><b>Name</b></label>
+                    <input type="text" class="name" required>
+
+                    <label><b>Category</b></label>
+                    <select class="category">
+                        <option value="Task">Task</option>
+                        <option value="Idea">Idea</option>
+                        <option value="Random Thought">Random Thought</option>
+                    </select>
+
+                    <label><b>Content</b></label>
+                    <textarea class="content" cols="30" rows="10"></textarea>
+
+                    <label><b>Dates</b></label>
+                    <input type="date" class="dateFirst"><input type="date" class="dateSecond">
+
+                    <button type="submit" class="save">Save</button>
+                    <button type="button" class="cancel">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div>Note Category</div>
+            <div>Active</div>
+            <div>Archived</div>
+        </div>
+
+        <div class="countDate">
+            <!--space for count-->
+        </div>
+        <div class="archiveButton">
+            <button class="open-archive" onclick="showArchive()">Archive</button>
+            <button class="close-archive">Close Archive</button>
+        </div>
+        <div class="archive">
+
+        </div>
+
+    </div>
+
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
