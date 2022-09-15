@@ -1,19 +1,77 @@
+.notepadApp {
+    flex-direction: column;
+    padding-top: 30px;
+    margin: 0px 20px 0px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+}
+
 .informationBar {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: rgb(124, 124, 124);
+    height: 75px;
+    border-radius: 15px;
     align-items: center;
-    background-color: rgb(151, 151, 151);
+    margin-bottom: 25px;
+}
+
+.note {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(219, 219, 219);
+    height: 75px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(219, 219, 219);
+    height: 75px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(219, 219, 219);
+    height: 75px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.countStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(219, 219, 219);
+    height: 75px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 
-
-
-
 /*button*/
+.open-button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
 
-
-* {
-    box-sizing: border-box;
+.archiveButton {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .form-popup {
@@ -31,7 +89,7 @@
     background-color: white;
 }
 
-/*archive*/
+
 .panel {
     display: flex;
     flex-direction: row;
@@ -40,4 +98,14 @@
 
 .archive {
     display: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.material-icons {
+    background: none;
+    border: 0px;
+
 }
