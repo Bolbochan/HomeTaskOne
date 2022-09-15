@@ -48,16 +48,16 @@ closeBox.addEventListener("click", () => {
 function showNotes() {
     document.querySelectorAll(".note").forEach(note => note.remove());
     notes.forEach((note, index) => {
-        let liTag = ` <li class="note">
+        let liTag = ` <div class="note">
         <div>${note.noteName}</div>
         <div>${note.date}</div>
         <div>${note.categoryName}</div>
         <div>${note.contentName}</div>
-        <div>${note.datesFirstName}${note.dateSecondName}</div>
-        <button class = "btn-arc" onclick="updateNote(${index},'${note.noteName}','${note.categoryName} ','${note.contentName}','${note.datesFirstName}','${note.dateSecondName}')">edit</button>
-        <button button onclick="archiveNote(${index},'${note.noteName}','${note.categoryName} ','${note.contentName}','${note.datesFirstName}','${note.dateSecondName}')" > archive</button >
-        <button onclick="deleteNote(${index})">delete</button>
-        </li > `;
+        <div>${note.datesFirstName} <br/> ${note.dateSecondName}</div>
+        <button class="material-icons" class = "btn-arc" onclick="updateNote(${index},'${note.noteName}','${note.categoryName} ','${note.contentName}','${note.datesFirstName}','${note.dateSecondName}')">edit</button>
+        <button class="material-icons" button onclick="archiveNote(${index},'${note.noteName}','${note.categoryName} ','${note.contentName}','${note.datesFirstName}','${note.dateSecondName}')" > archive</button >
+        <button class="material-icons" onclick="deleteNote(${index})">delete</button>
+        </ div> `;
         spaceBox.insertAdjacentHTML("afterbegin", liTag);
     })
 };
@@ -150,9 +150,9 @@ archiveCount = counter;
 function showCount() {
     document.querySelectorAll(".count");
     let liTag = ` <div class="count">
-        <div>Task${notesCount[0]}${archiveCount[0]}</div>
-        <div>Idea${notesCount[1]}${archiveCount[1]}</div>
-        <div>Random Thought${notesCount[2]}${archiveCount[2]}</div>
+        <div class="countStyle"><div>Task</div><div>${notesCount[0]}</div><div>${archiveCount[0]}</div></div>
+        <div class="countStyle"><div>Idea</div><div>${notesCount[1]}</div><div>${archiveCount[1]}</div></div>
+        <div class="countStyle"><div>Random Thought</div><div>${notesCount[2]}</div><div>${archiveCount[2]}</div></div>
         </ div> `;
     countBox.insertAdjacentHTML("afterbegin", liTag);
 };
@@ -170,15 +170,15 @@ function showArchive() {
 
     document.querySelectorAll(".test").forEach(test => test.remove());
     archive.forEach((test, index) => {
-        let dateTag = ` <div class="test" id="wtf">
+        let dateTag = ` <div class="test">
         <div>${test.noteName}</div>
         <div>${test.date}</div>
         <div>${test.categoryName}</div>
         <div>${test.contentName}</div>
-        <div>${test.datesFirstName}${test.dateSecondName}</div>
-        <button onclick="updateNote(${index},'${test.noteName}','${test.categoryName} ','${test.contentName}','${test.datesFirstName}','${test.dateSecondName}')">edit</button>
-        <button button onclick="unzipNote(${index},'${test.noteName}','${test.date}','${test.categoryName} ','${test.contentName}','${test.datesFirstName}','${test.dateSecondName}')" > unzip</button >
-        <button onclick="deleteArchive(${index})">delete</button>
+        <div>${test.datesFirstName}  ${test.dateSecondName}</div>
+        <button class="material-icons" onclick="updateNote(${index},'${test.noteName}','${test.categoryName} ','${test.contentName}','${test.datesFirstName}','${test.dateSecondName}')">edit</button>
+        <button class="material-icons" button onclick="unzipNote(${index},'${test.noteName}','${test.date}','${test.categoryName} ','${test.contentName}','${test.datesFirstName}','${test.dateSecondName}')" > unarchive</button >
+        <button class="material-icons" onclick="deleteArchive(${index})">delete</button>
         </ div> `;
         archiveBox.insertAdjacentHTML("afterbegin", dateTag);
     })
